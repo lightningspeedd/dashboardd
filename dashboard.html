@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+
+  .custom-button {
+    display: inline-block;
+    padding: 12px 24px;
+    margin: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    text-transform: uppercase;
+    background: linear-gradient(45deg, #ff9a9e, #fad0c4);
+    border: none;
+    border-radius: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    outline: none;
+    transition: transform 0.2s, box-shadow 0.2s;
+    margin-bottom: 10px;
+  }
+
+  .custom-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  }
+
+  .custom-button:active {
+    transform: scale(0.95);
+  }
+
+  .dashboard {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    grid-template-rows: 80px 1fr;
+    grid-template-areas: 
+      "header header"
+      "sidebar main";
+    height: 100vh;
+  }
+
+  .header {
+    grid-area: header;
+    background-color: #333;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+  }
+
+  .sidebar {
+    grid-area: sidebar;
+    background-color: #f4f4f4;
+    padding: 20px;
+  }
+
+  .main {
+    grid-area: main;
+    padding: 20px;
+  }
+
+  .sidebar-item {
+    margin-bottom: 10px;
+  }
+</style>
+</head>
+<body>
+<div class="dashboard">
+  <div class="header">Dashboard</div>
+  <div class="sidebar">
+    <button class="custom-button" onclick="location.href='dashboard.html'">Dashboard</button>
+    <button class="custom-button" onclick="location.href='analytics.html'">Analytics</button>
+    <button class="custom-button" onclick="location.href='settings.html'">Settings</button>
+    <button class="custom-button" onclick="location.href='about.html'">About Me</button>
+    <button class="custom-button" onclick="location.href='R6.html'">R6</button>
+  </div>
+  <div class="main">
+    <h1>Welcome to the Dashboard</h1>
+    <p>This is a simple dashboard layout using HTML and CSS.</p>
+  </div>
+</div>
+</body>
+</html>
